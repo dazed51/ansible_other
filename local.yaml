@@ -39,3 +39,19 @@
   
   - name: Install tmux
     dnf: name=tmux
+
+  - name: Install 
+    dnf: name=qemu-img
+
+  - name: Install
+    dnf: name=libvirt
+
+  - name: Install
+    dnf: name=virt-manager
+
+  - name: Install
+    dnf: name=libvirt-python
+
+  - name: Install
+    dnf: name=libvirt-client
+

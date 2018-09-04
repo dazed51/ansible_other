@@ -33,9 +33,6 @@
 
   - name: Install ssldump
     dnf: name=ssldump
-
-  - name: Install nfs-kernel-server
-    dnf: name=nfs-kernel-server
   
   - name: Install tmux
     dnf: name=tmux

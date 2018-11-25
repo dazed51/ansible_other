@@ -25,9 +25,6 @@
   - name: Install aircrack-ng
     dnf: name=aircrack-ng
 
-  - name: Install docker
-    dnf: name=docker
-
   - name: Install irssi
     dnf:  name=irssi
 

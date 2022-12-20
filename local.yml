@@ -67,9 +67,6 @@
   - name: Install evince
     dnf: name=evince
 
-  - name: Install terminator
-    dnf: name= terminator
-
 
   - name: brave repo
     rpm_key:

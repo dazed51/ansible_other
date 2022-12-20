@@ -68,14 +68,8 @@
     dnf: name=evince
 
 
-  - name: brave repo
-    rpm_key:
-      https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-    state: present
-    become: true
-
   - name: install brave web browser
-    yum_repository:
+    ansible.builtin.yum_repository:
       name: brave stable
       description: repo for brave
       baseurl: https://brave-browser-rpm-release.s3.brave.com
@@ -83,15 +77,8 @@
       gpgkey:  https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     become: true
 
-
-  - name: vscode repo
-    rpm_key:
-      https://packages.microsoft.com/keys/microsoft.asc
-    state: present
-    become: true
-  
   - name: install micorosoft vcsode
-    yum_repository:
+    ansible.builtin.yum_repository:
       name: vscode latest
       description: repo for vscode
       baseurl: https://packages.microsoft.com/yumrepos/vscode

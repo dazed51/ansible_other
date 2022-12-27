@@ -59,7 +59,7 @@
     dnf: name=evince
 
 
-  - name: install brave web browser
+  - name: repo brave web browser
     ansible.builtin.yum_repository:
       name: brave stable
       description: repo for brave
@@ -68,7 +68,7 @@
       gpgkey:  https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     become: true
 
-  - name: install micorosoft vcsode
+  - name: repo microsoft vcsode
     ansible.builtin.yum_repository:
       name: vscode latest
       description: repo for vscode

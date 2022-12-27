@@ -43,12 +43,6 @@
   - name: Install virt-manager
     dnf: name=virt-manager
 
-  - name: Install libvirt-python
-    dnf: name=libvirt-python
-
-  - name: Install libvirt-client
-    dnf: name=libvirt-client
-
   - name: Install gnote
     dnf: name=gnote
  

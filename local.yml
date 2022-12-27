@@ -59,10 +59,9 @@
     dnf: name=evince
 
 
-  - name: repo brave web browser
+  - name: brave
     ansible.builtin.yum_repository:
-      name: brave stable
-      description: repo for brave
+      name: bravestable
       baseurl: https://brave-browser-rpm-release.s3.brave.com/x86_64/
       gpgcheck: true
       gpgkey:  https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
@@ -79,6 +78,8 @@
 
   #- name: Install code
   #  dnf: name=code
+
+
 
   - name: Install brave
     dnf: name=brave-browser

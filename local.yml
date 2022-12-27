@@ -68,17 +68,17 @@
       gpgkey:  https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     become: true
 
-  #- name: repo microsoft vcsode
-   # ansible.builtin.yum_repository:
-    #  name: vscode latest
-     # description: repo for vscode
-      #baseurl: https://packages.microsoft.com/yumrepos/vscode
-      #gpgcheck: true
-      #gpgkey:  https://packages.microsoft.com/keys/microsoft.asc
-    #become: true
+  - name: Vscod code Repo
+    ansible.builtin.yum_repository:
+      name: vscode-latest
+      description: repo-for-vscode
+      baseurl: https://packages.microsoft.com/yumrepos/vscode
+      gpgcheck: true
+      gpgkey:  https://packages.microsoft.com/keys/microsoft.asc
+    become: true
 
-  #- name: Install code
-  #  dnf: name=code
+  - name: Install code
+    dnf: name=code
 
 
 

@@ -49,9 +49,6 @@
   - name: Install libvirt-client
     dnf: name=libvirt-client
 
-  - name: Install gedit
-    dnf: name=gedit
-
   - name: Install gnote
     dnf: name=gnote
  

@@ -58,7 +58,6 @@
   - name: Install evince
     dnf: name=evince
 
-
   - name: Brave Repo
     ansible.builtin.yum_repository:
       name: brave-stable
@@ -68,7 +67,7 @@
       gpgkey:  https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
     become: true
 
-  - name: Vscod code Repo
+  - name: Vscode code Repo
     ansible.builtin.yum_repository:
       name: vscode-latest
       description: repo-for-vscode
@@ -79,8 +78,6 @@
 
   - name: Install code
     dnf: name=code
-
-
 
   - name: Install brave
     dnf: name=brave-browser

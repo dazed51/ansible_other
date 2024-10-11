@@ -53,7 +53,7 @@
     zypper: name=kvm_tools type=pattern
  
   - name: vscode repo
-    zypper:
+    zypper_repository:
       repo: https://download.opensuse.org/repositories/devel:/tools:/ide:/vscode/openSUSE_Tumbleweed devel_tools_ide_vscode
       name: vscode
 

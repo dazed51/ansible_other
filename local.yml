@@ -13,8 +13,6 @@
   - name: Install deluge
     zypper: name=deluge
 
-  - name: Install openvpn
-    zypper: name=openvpn
 
   - name: Install vlc
     zypper: name=vlc
@@ -22,8 +20,6 @@
   - name: Install nmap
     zypper: name=nmap
 
-  - name: Install aircrack-ng
-    zypper: name=aircrack-ng
 
   - name: Install irssi
     zypper:  name=irssi
@@ -34,14 +30,6 @@
   - name: Install tmux
     zypper: name=tmux
 
-  - name: Install qemu-img 
-    zypper: name=qemu-img
-
-  - name: Install libvirt
-    zypper: name=libvirt
-
-  - name: Install virt-manager
-    zypper: name=virt-manager
 
   - name: Install distrobox
     zypper: name=distrobox

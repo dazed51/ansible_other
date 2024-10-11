@@ -55,6 +55,7 @@
   - name: vscode repo
     zypper:
       repo: https://download.opensuse.org/repositories/devel:/tools:/ide:/vscode/openSUSE_Tumbleweed devel_tools_ide_vscode
+      name: vscode
       auto_import_keys: yes
 
   - name: Install code

@@ -54,7 +54,7 @@
  
   - name: vscode repo
     zypper_repository:
-      repo:  https://packages.microsoft.com/yumrepos/vscode vscode 
+      repo:  https://packages.microsoft.com/yumrepos/vscode  
       name: vscode
       auto_import_keys: yes
 

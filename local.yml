@@ -2,64 +2,72 @@
   become: true
   tasks:
   - name: Install htop
-    zypper: name=htop
+    dnf: name=htop
 
   - name: Install vim
-    zypper: name=vim
+    dnf: name=vim
 
   - name: Install wireshark
-    zypper: name=wireshark
+    dnf: name=wireshark
 
   - name: Install deluge
-    zypper: name=deluge
+    dnf: name=deluge
 
 
   - name: Install vlc
-    zypper: name=vlc
+    dnf: name=vlc
 
   - name: Install nmap
-    zypper: name=nmap
+    dnf: name=nmap
 
 
   - name: Install irssi
-    zypper:  name=irssi
+    dnf:  name=irssi
 
   - name: Install ssldump
-    zypper: name=ssldump
+    dnf: name=ssldump
   
   - name: Install tmux
-    zypper: name=tmux
+    dnf: name=tmux
 
 
   - name: Install distrobox
-    zypper: name=distrobox
+    dnf: name=distrobox
 
   - name: Install gimp
-    zypper: name=gimp
+    dnf: name=gimp
 
   - name: Install evince
-    zypper: name=evince
+    dnf: name=evince
 
-  - name: Install Docker
-    zypper: name=docker
-    
-  - name: Install Docker-compose
-    zypper: name=docker-compose  
-
-  - name: KVM server pattern
-    zypper: name=kvm_server type=pattern
-
-  - name: KVM tools
-    zypper: name=kvm_tools type=pattern
  
   - name: vscode repo
-    zypper_repository:
+    dnf_repository:
       repo:  https://packages.microsoft.com/yumrepos/vscode  
       name: vscode
       auto_import_keys: yes
 
   - name: Install code
-    zypper: name=code
+    dnf: name=code
+
+  - name: Install dev tools
+    dnf:
+      name: '@Development tools'
+      state: present
+
+  - name: Install virt env
+    dnf: name=libvirt
+
+  - name: Install virt-manager
+    dnf: name=virt-manager
+
+  - name: Install brave repo
+    ansible.builtin.yum_repository:
+      name: brave-browser
+      baseurl: https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+      gpgcheck: yes
+      gpgkey:  https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+
 
 
 ###flatpak installs###

@@ -40,15 +40,6 @@
   - name: Install evince
     dnf: name=evince
 
- 
-  - name: vscode repo
-    dnf_repository:
-      repo:  https://packages.microsoft.com/yumrepos/vscode  
-      name: vscode
-      auto_import_keys: yes
-
-  - name: Install code
-    dnf: name=code
 
   - name: Install dev tools
     dnf:
@@ -68,6 +59,8 @@
       gpgcheck: yes
       gpgkey:  https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
+  - name: Install brave
+    dnf: name=brave-browser
 
 
 ###flatpak installs###
